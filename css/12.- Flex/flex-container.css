@@ -1,0 +1,53 @@
+/*  
+    PROPIEDADES DE LOS CONTENEDORES FLEX:
+    flex-direction: permite cambiar la direccion del main axis. es una propiedad del container.
+        row-reverse espeja los items en el eje x. column los pone en vertical. column-reverse los pone en vertical y espejados.
+
+    flex-wrap: nowrap es el valor por defecto
+        wrap te mantiene el tamaño de las cajas y te las tira para abajo cuando el vh es mas chico.
+        wrap-reverse: las cajas van para arriba cuando achicamos el vh, mantienen el tamaño
+
+    flex-flow: es un shorthand seria: flex-flow: flex-direction flex-wrap (pongo los valores en el espacio 1 y en el espacio 2)
+
+    justify-content (X): sirve para definir la posicion de los elementos del contenedor. es una propiedad del container. aplica sobre el main axis
+        center: lo centra.
+        space-between: les deja un margen entre las cajas para que cubra el ancho.
+        space-around: deja el maximo espacio posible entre las cajas
+        space-evenly: cada una de las cajas tiene exactamente el mismo margen, inclusive entre la caja del principio y el vh izquierdo y la del final con el derecho.
+
+    align-items (Y): alinea los elementos en el eje Y pero con respecto al container, no al vh. se usa para cuando hay una sola linea de flex-items.
+        stretch: es la propiedad por defecto, no cambia nada salvo que los items no tengan height, en dicho caso, los alarga para abajo.
+        center: lo centra
+        flex-start: lo pone arriba de todo y no se estira si no tenemos definido el height como en stretch
+        flex-end: lo pone abajo de todo
+        baseline: se usa con wrap-reverse y sirve para que se vayan wrapeando para arriba.
+
+    align-content (Y): se usa para cuando hay mas de una fila de flex items. se usan los mismos valores que en align-items.
+
+*/
+
+
+.flex-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: row; /* row es el que viene por defecto */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.flex-item {
+    background: #248;
+    color: #fff;
+    margin: 5px;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+}
+
+.orange {
+    background: #f90;
+}
+
+.green {
+    background: #0a0;
+}

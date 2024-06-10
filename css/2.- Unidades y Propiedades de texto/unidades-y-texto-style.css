@@ -1,0 +1,26 @@
+/* 1em = 16px (default) | o el valor que le demos a la caja contenedora */
+
+.caja1 {
+    font-size: 15px;
+    background-color: #000;
+    width: 80vw; /*viewport width, va a ocupar el (valor)% de anchio de la pantalla */
+    height: 5vh; /*viewport height, va a ocupar el (valor)% de altura de la pantalla */    
+}
+
+.caja1-h2 {
+    font-size:4em; /*como la caja que contiene esto vale 20px, 1em son 20px y por lo tanto 5em son 100px */
+}
+
+.caja1-h2-p {
+    font-size: 1em;
+    font-family: Georgia, sans-serif, Arial; /*despues del font-family: se pueden poner varias fuentes separadas de una coma por si no encuentra alguna, que use la siguiente. */
+    line-height: 2; /*es el tamaño que va a ocupar la letra en si misma (te das cuenta seleccionando el txt con el mouse) */
+    font-weight: 100; /*el ancho de la letra, se estrecha y ocupa mas espacio a lo ancho */
+}
+
+/* para que un elemento en bloque se comporte como uno en linea o viceversa
+
+elemento {
+    display: inline/block;
+}
+*/

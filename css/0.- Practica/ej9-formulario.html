@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../normalize.css">
+        <link rel="stylesheet" type="text/css" href="ej9-formulario.css">
+        <title>Formulario</title>
+    </head>
+
+    <body>
+
+    <div class="all-container">
+        <h1>iDESWEB</h1>
+
+        <h2>Formulario de registro</h2>
+
+        <div class="container quien">
+            <h3>¿QUIÉN ERES?</h3> 
+
+            <p>Nombre</p>
+            <input type="text" name=""> 
+
+            <p>Apellidos</p>
+            <input type="text" name="">
+
+            <p>Correo electronico</p>
+            <input type="email" name="">
+
+            <p>Fecha de nacimiento</p>
+            <input type="date" name="">
+        </div>
+
+        <div class="container donde"> 
+            <h3>¿DE DÓNDE ERES?</h3> 
+
+            <p>Ciudad</p>
+            <input type="text" name=""> 
+
+            <p>Codigo postal</p>
+            <input type="text" name="">
+
+            <p>Pais</p>
+            <select name="Población">
+                <option>Argentina</option>
+                <option>Brasil</option>
+                <option>Uruguay</option>
+            </select>
+        </div>
+
+        <div class="container sesion">
+            <h3>¿CÓMO QUIERES INICIAR SESION?</h3>
+
+            <p>Nombre de usuario</p>
+            <input type="text" name=""> 
+
+            <p>Contraseña</p>
+            <input type="password" name=""> 
+
+            <p>Vuelve a escribir tu contraseña</p>
+            <input type="password" name=""> 
+        </div>
+
+        <div class="container registro">
+            <h3>CONDICIONES DE REGISTRO</h3>
+
+            <p>Deseo recibir ofertas de iDESWEB</p> <!-- les pongo el mismo name a todos para que deje seleccionar solo a uno -->
+            <input type="radio" name="ofertas"> Una vez al dia 
+            <input type="radio" name="ofertas"> Una vez a la semana
+            <input type="radio" name="ofertas"> Una vez al mes
+            <br>
+            <input type="checkbox" name="" class="input-checkbox"> Acepto el acuerdo de servicios, la declaracion de privacidad y los cookies.
+        </div>
+
+        <div class="submit-container">
+            <input type="submit" value="Enviar">
+        </div>
+    </div>
+    </body>
+</html>

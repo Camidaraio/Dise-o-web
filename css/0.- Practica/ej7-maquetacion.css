@@ -1,0 +1,50 @@
+body {
+    width: 960px;
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    left: 470px;
+}
+
+#primera-columna {
+    display: inline-block;
+    position: relative;
+    width: 260px;
+    left: 470px;
+}
+
+#segunda-columna {
+    display: inline;
+    position: absolute;
+    width: 700px;
+    left: 750px;
+}
+
+p + p {
+    padding-top: 20px;
+}
+
+#datos-libro {
+    margin: 15px 0 15px 0;
+}
+
+#descripcion-libro {
+    position:relative;
+    margin-bottom: 10px;
+}
+
+#contenido-libro {
+    margin: 20px 0 20px 0;
+}
+
+#contenido {
+    margin: 15px 0px 15px 0;
+}
+
+#columna-1, #columna-2, #columna-3 {
+    list-style: none;
+    float: left;
+    width: 33%;
+}

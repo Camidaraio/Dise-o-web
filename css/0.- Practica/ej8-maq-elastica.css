@@ -1,0 +1,36 @@
+body {
+    width: 60em;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0 40px 0;
+}
+
+.flex-container {
+    display:flex;
+    width: 60em;
+}
+
+.data-container {
+    width: 16em;
+    min-width: 16em;
+}
+
+h2 {
+    margin: 10px;
+}
+
+.columna-grande-container p {
+    padding: 10px;
+}
+
+.lista-columnas {
+    display: flex;
+}
+
+.lista-columnas li {
+    padding: 10px;
+    list-style: none;
+}

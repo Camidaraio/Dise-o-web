@@ -1,0 +1,32 @@
+* {
+    font-family: "Sen", sans-serif;
+    font-weight: 400;
+}
+
+.div-responsive {
+    background: #c95;
+}
+
+@media screen and (min-width: 400px)  and (max-width: 650px) {
+
+    .div-responsive{
+        background: #080;
+    }
+     
+}
+
+@media screen and (min-width: 650px)  and (max-width: 850px) {
+
+    .div-responsive{
+        background: #fa0;
+    }
+     
+}
+
+@media screen and (min-width: 850px)  and (max-width: 1100px) {
+
+    .div-responsive{
+        background: #900;
+    }
+     
+}

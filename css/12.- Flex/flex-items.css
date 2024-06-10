@@ -1,0 +1,53 @@
+/*  PROPIEDADES DE LOS FLEX ITEMS:
+
+    margin: cuando lo definimos en auto, va a ir al lado contrario de donde lo digamos. Ej: margin-top: auto, va a ir abajo de todo.
+    si definimos los 4 margin como auto o mismo  margin: auto, (que es lo mismo que darle a los 4 por separado) se va a centrar en X y en Y.
+
+    align-self (Y): va a ubicar la caja en donde elijamos: center/flex-end/flex-start. valor por defecto: stretch.
+
+    flex-grow: especificas que cantidad de espacio restante dentro del contenedor le asignamos a cada item. se puede combinar
+    con min-width en el item y flex-wrap en el container para que se estire y ocupe todo lo que quiera y cuando llega al minimo, que baje.
+    el valor que se le da es segun los pixeles vacios que quedan ej: si quedan 300 pixeles y yo le doy 2 a uno y 1 al otro. uno va a medir
+    200 pixeles mas y el otro 100.
+
+    flex-basis: sirve como el width pero tiene mas jerarquia.
+
+    flex-shrink: cuanto mas alto sea el valor que le demos, mas va a ceder espacio en referencia a las otras cajas cuando se achique el vh.
+    si quiero que no ceda con respecto a su tamaño, le doy el valor 0 y van a ceder las demas. se empieza a repartir el espacio cuando todas
+    las cajas alcancen el espacio asignado con el width o flex-basis.
+
+    flex: es un shorthand en el que abrevia: flex-grow flex-shrink y flex-basis.
+
+    order: es como el z-index pero en el eje en el que apunta el main-axis (X). ej: si a alguna caja le doy order 5 y a las demas nada, va a estar ultima
+
+
+*/
+
+
+.flex-container {
+    display: flex;
+    height: 100vh;
+    justify-content: stretch;
+}
+
+.flex-item {
+    background: #248;
+    color: #fff;
+    margin: 5px;
+    min-width: 120px;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    flex-grow: 1;
+
+}
+
+.orange {
+    background: #f90;
+    flex-basis: 200px;
+    flex-shrink: 0;
+}
+
+.green {
+    background: #0a0;
+}

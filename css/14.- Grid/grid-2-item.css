@@ -1,0 +1,55 @@
+/*  PROPIEDADES DE LOS GRID ITEMS
+
+    grid-column: sirve para decirle al item que su columna vaya de tal linea a tal linea. ej: grid-column 1/3. el item agrandarse para ocupar de la linea
+    de la columna 1 a la 3 (1/3). tambien se le puede decir que vaya de tal linea y que ocupe tantas lineas. ej: 1/span 3. (a partir de la 1 y que ocupe 3 columnas)
+    grid-row: lo mismo que el column pero con las filas.
+
+    repeat: sirve para repetir valores. el primer valor es cuantas veces quiero que lo repita y el segundo que es lo que quiero que me repita
+    ej: grid-template-rows: repeat(3, 180px). tambien puedo poner que me repita los 2 valores pero me los va a repetir los 2 juntos tipo bloque, no primero todos
+    los del primer valor y luego los del segundo, sino que los 2 como un bloque ej: repeat(2, 10px 1fr) seria lo mismo que: 10px 1fr 10px 1fr.
+
+    grid-auto-rows: es lo mismo que el grid-template-rows pero para el grid implicito. por defecto el grid implicito se crea como filas y ahi uso este parametro.
+    grid-auto-columns: aplica para cuando le damos un grid-auto-flow: column. es lo mismo que el grid-template-columns pero para el grid implicito. 
+    grid-auto-flow: sirve para especificar como queremos que se comporte el grid implicito, si como row, column o dense (es para rellenar los campos vacios)
+
+
+*/
+
+
+* {
+    font-family: "Sen", sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background: radial-gradient(circle, #fff, #bbb);
+    padding: 20px;
+
+}
+
+.grid-container {
+    display: grid;
+    border: 3px solid #000;
+    grid-template-columns: repeat(3, 180px); /* fr es como el flex-grow. va a asignarle el espacio disponible del viewport a lo que querramos, en este caso a la ultima columna. */
+    grid-template-rows: 180px 180px 180px; /* creo 3 filas de 180px cada una. no hace falta que en todas el tamaño sea el mismo */
+    grid-auto-rows: 120px;
+    grid-auto-flow: row; /* row es la q viene por defecto, lo pongo de muestra nomas */
+    background: #333;
+}
+
+.grid-item {
+    border: 1px solid #000;
+    background: #aaa;
+}
+
+.first {
+    background: #a00;
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.second {
+    background: #0a0;
+    grid-column: 3/4;
+    grid-row: 1/3;
+}

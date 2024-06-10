@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de registro - Mi web</title>
+    </head>
+
+    <body>
+
+        <h1>Formulario de registro</h1>
+        
+        <form action="" method="GET">
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" maxlength="50" name="nombre" id="nombre" required>
+
+        </p>
+
+        <p>
+            <label for="apellidos1">Apellidos:</label>
+            <input type="text" maxlength="50" name="apellidos" id="apellidos" required>
+        </p>
+
+        <p>
+            Sexo:
+                <input type="radio" name="sexo" value="h" id="sexo-h" required> <label for="sexo-h">Hombre</label>
+                <input type="radio" name="sexo" value="m" id= "sexo-m" required> <label for="sexo-m"> Mujer</label>
+        </p>
+
+        <p>
+            <label for="correo">Correo:</label>
+            <input type="email" name="correo" id="correo" required>
+        </p>
+        
+        <p>
+            Población:
+            <select name="Población">
+                <option value="alicante">Alicante</option>
+                <option value="madrid">Madrid</option>
+                <option value="sevilla">Sevilla</option>
+                <option value="valencia">Valencia</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="descripcion">Descripción:</label>
+            <textarea name="descripcion" id="descripcion" cols="35" rows="6"></textarea>
+        </p>
+
+        <p>
+            <input type="checkbox" name="wishinfo" value="info" checked>
+            Deseo recibir información sobre novedades y ofertas.
+        </p>
+
+        <p>
+            <input type="checkbox" name="wishcond" value="condiciones" required>
+            Declaro haber leido y aceptar las condiciones generales del programa y la normativa sobre protección de datos
+        </p>
+
+        <p>
+        <input type="submit" value="Enviar">
+        </p>
+
+        </form>
+
+
+    </body>
+
+</html>

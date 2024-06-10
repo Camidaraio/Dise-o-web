@@ -1,0 +1,31 @@
+/* Jerarquia de especificidad.
+!important
+style= (en html)
+id=""
+class=""
+h1,h2,h3,h4
+p,b,i,strong,em.
+*/
+
+
+
+.titulo-h2{ /*por class*/
+    color:salmon;
+}
+
+#titulito{ /*por id*/
+    color:blueviolet;
+}
+
+h4 p{
+    color:green;
+}
+
+#h3-ultimo:hover {
+    color:orange
+}
+
+h1 { /*al poner el important, cancelcca todo en este caso el style del html */
+    color:crimson !important 
+}
+

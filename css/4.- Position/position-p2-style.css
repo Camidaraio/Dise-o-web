@@ -1,0 +1,25 @@
+/* el position: fixed sirve para dejar fijo el contenedor que designemos, es comunes en menus. Tiene las mismas propiedades que absolut pero este queda fijo */ 
+/* el position: sticky conserva el espacio que deja como el relative y se comporta como fixed cuando llega al punto que nosotros le decimos con top */
+/* ademas que en el sticky no va a dejar texto abajo porque ocupa su lugar relativamente */
+
+* {
+    font-size: 40px;
+    font-family:'Franklin Gothic Medium';
+}
+
+body {
+    padding-top: 100px;
+}
+
+.caja-fixed {
+    background: red;
+    position: fixed;
+    margin: -100px;
+
+}
+
+.caja-sticky {
+    background: green;
+    position: sticky;
+    top: -50px;
+}

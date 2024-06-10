@@ -1,0 +1,82 @@
+/*  linear-gradient: direccion, color inicial, color final */
+
+body {
+    background: #121212;
+}
+
+.flex-container {
+    max-width: 900px; /*le pongo un maximo de ancho para que en pantallas muy anchas no se estire todo infinitamente */
+    display: flex;
+    background: #555;
+    align-items: center; /*Y*/ 
+    justify-content: center; /*X*/
+    margin: 50px 50px;
+    flex-wrap: wrap;
+    border: 3px solid #3aa;
+    
+}
+
+.form {
+    padding: 30px;
+    flex-grow: 1;
+    text-align: center;
+    order: 10;
+}
+
+.form__input {
+    width: 100%;
+    padding: 7px;
+    margin: 7px 0;
+    border: none;
+    border-bottom: 3px solid #3aa;
+    background: #000;
+    color: #fff;
+
+}
+
+.form__input:focus {
+    outline: none;
+    background: linear-gradient(to bottom, transparent, #111);
+    border-bottom: 3px solid #9ee;
+    border-top: 1px solid #3aa;
+}
+
+.form textarea {
+    min-height: 150px;
+    resize: none; /* para que no se pueda modificar el tamaño del textarea */
+}
+
+.form-img {
+    min-width: 300px;
+    max-width: 400px;
+    padding: 20px;
+    display: flex;
+    flex: 1;
+    order: 5;
+}
+
+.form-img img {
+    width: 85%;
+    margin: auto;
+}
+
+.submit__input {
+    border-bottom: none;
+    border: 2px solid #3aa;
+    background: #5cc;
+    padding: 10px;
+    
+}
+
+.submit__input:focus{
+    background: #3aa;
+    border-bottom: none;
+    padding: 10px;
+    border: 2px solid #3aa;
+}
+.submit__input:active {
+    background: linear-gradient(to bottom, #3aa, #4af);
+    border-bottom: none;
+    padding: 10px;
+    border: 2px solid #3aa;
+}

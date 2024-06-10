@@ -1,0 +1,15 @@
+.caja1 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: auto; /* si el elemento es bloque y no esta posicionado, esto lo centra */
+    outline: 10px solid blue /* le hace un borde pero por afuera por lo que no ocupa espacio, la caja sigue midiendo lo mismo, si le pongo border, la caja seria mas chica*/
+
+}
+
+.caja2 {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    margin: auto;
+}

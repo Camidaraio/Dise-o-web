@@ -1,0 +1,62 @@
+/*  ALINEACION EN CONTAINER:
+
+    justify-items (X): va a alinear y ajustar al contenido de cada una de las celdas pero todas por igual. va en el grid container.
+    align-items (Y): funcioona igual que el anterior pero en este caso en el eje Y. es lo mismo que con flex.
+    justify-content (X): sirve para alinear en el eje x cuando las columnas son mas chicas o no llegan a completar el grid container. valores: start end center.
+    align-content (Y): sirve para alinear el contenedor en el eje y. se usa cuando el contenedor es mas grande que el alto de las filas. valores: start end center.
+    los content tambien pueden recibir los valores: space-around / evenly / between como flex.
+
+    
+    ALINEACION EN ITEMS:
+
+    justify-self: para ordenarlo en el eje X al item en si
+    align-self: para alinearlo en el eje Y al item en si
+    place-self: shorthand para los anteriores. place-self: align-self justify-self
+
+    order: igual que en flex.
+
+*/
+
+* {
+    font-family: "Sen", sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background: radial-gradient(circle, #fff, #bbb);
+    padding: 20px;
+
+}
+
+.grid-container {
+    display: grid;
+    border: 3px solid #000;
+    grid-template-columns: repeat(3, 150px); 
+    grid-template-rows: repeat(3, 200px); 
+    background: #355;
+    justify-content: end;
+    align-content: end;
+    align-items: center;
+    justify-items: center;
+    height: 680px;
+
+}
+
+.grid-item {
+    border: 1px solid #000;
+    background: #aaa;
+    font-size: 30px;
+    padding: 50px;
+}
+
+.grid-item:nth-child(5){
+    justify-self: end;
+    border-right: none;
+}
+
+/* con esas 2 cosas hago que el 5 y el 6 esten juntos */
+
+.grid-item:nth-child(6){
+    justify-self: start;
+    border-left: none;
+}

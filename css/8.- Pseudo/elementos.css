@@ -1,0 +1,43 @@
+/* first-line y first-letter funciona en cualquier elemento menos en los inline. */
+/* placeholder es el texto gris que aparece antes de completar un input */
+/* before y after van si o si con el { content:""; y se pueden usar con inline y block */
+
+#parrafo-1::first-letter {
+    color: orange;
+    font-size: 40px;
+}
+
+#parrafo-2::first-line {
+    background: grey;
+    font-size: 20px;
+}
+
+form {
+    margin: auto;
+    margin-top: 50px;
+    width: 400px;
+    padding: 50px; /*para poder ver el fondo verde */
+    background: green;
+}
+
+form input {
+    width: 100%; /*para que ocupe el 100% del contenedor form */
+}
+
+input::placeholder { /*le puedo dar lo que yo quiera pero queda horrible */
+    color: red;
+}
+
+#racing {
+    margin: 10px;
+    text-align: center;
+}
+span::after {
+    content:" Independiente";
+    color: red;
+}
+
+span::before {
+    content:"Racing se coje ";
+    color: aqua;
+}

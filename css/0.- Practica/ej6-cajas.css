@@ -1,0 +1,36 @@
+body {
+    padding-top: 25px;
+    padding-left: 25px;
+    width: 960px;
+}
+
+#todo {
+    width: 960px;
+}
+
+h1 {
+    border: 2px solid #00f;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    border: 2px solid #aaa;
+    padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px; /*lo puedo poner asi o como está abajo */
+}
+
+ul {
+    margin: 15px 0px 15px 0px;
+    border: 2px solid #0f0;
+    padding-left: 30px; /*pongo esto para que me mande el contenido a la derecha y no quede pegado el borde con los puntitos */
+}
+
+li {
+    margin-bottom: 0px; /*para que en el ultimo elemento de la lista no quede un margen */
+}
+
+li + li {
+    margin-top: 15px; /*lo aplica a partir del segundo elemento de la lista por el li + li */
+}

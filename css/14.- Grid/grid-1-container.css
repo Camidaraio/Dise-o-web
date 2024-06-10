@@ -1,0 +1,36 @@
+/*  PROPIEDADES DE LOS GRID CONTAINER:
+
+    grid-template-rows: le asignamos un espacio a las filas del grid container. puede ser en pixeles, em o fr.
+    grid-template-columns: le asignamos un espacio a las columnas del grid container. puede ser en pixeles, em o fr.
+    grid-template: shorthand. grid-template: rows columns areas. buscar bien.
+
+    row-gap:  le da un margen entre las filas. no las separa del contenedor, solo entre filas
+    column-gap: le da un margen entre las columnas. no las separa del contenedor, solo entre columnas
+    gap: shorthand. sirve para grid-gap: row column. primer valor row y segundo column. si pongo un valor solo, vale para los 2. sin comas.
+
+
+*/
+
+
+* {
+    font-family: "Sen", sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background: radial-gradient(circle, #fff, #bbb);
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    border: 3px solid #000;
+    grid-template-rows: 180px 180px 180px; /* creo 3 filas de 180px cada una. no hace falta que en todas el tamaño sea el mismo */
+    grid-template-columns: 180px 180px 1fr 1fr; /* fr es como el flex-grow. va a asignarle el espacio disponible del viewport a lo que querramos, en este caso a la ultima columna. */
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.grid-item {
+    border: 1px solid #000;
+}

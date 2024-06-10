@@ -1,0 +1,59 @@
+.div-1 {
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background: slateblue;
+}
+
+.div-1:hover { /* se activa cuando le ponemos el mouse por encima */
+    background: blue;
+    height: 300px;
+    width: 300px;
+    transition: all 1s; /* tambien puedo poner especificamente que quiero ej: background 1s, height 0.5s, width 0.3s; o tambien: all 1s, background 0.5s; para excepcionarlo. */
+}
+
+button {
+    margin: 15px;
+    padding: 10px;
+    background: blue;
+}
+
+button:hover {
+    background: slateblue;
+}
+
+a {
+    margin: 15px;
+}
+
+a:link { /* sirve para darle propiedades a los links que querramos */
+    color: yellow;
+}
+
+a:visited { /*aplica recien cuando ese link ya esta visitado */
+    color:greenyellow;
+}
+
+.div-2 {
+    width: 150px;
+    height: 150px;
+    background: orange;
+    margin: 15px;
+}
+
+.div-2:active { /* se activa cuando apretamos lo que pusimos */
+    background: orangered;
+    width: 180px;
+    height: 180px;
+    transition: all 0.8s;
+}
+
+input { /* funciona para cuando le damos click y esta seleccionado el elemento */
+    margin-left: 15px;
+    background: grey;
+}
+
+input:focus {
+    background: white;
+}

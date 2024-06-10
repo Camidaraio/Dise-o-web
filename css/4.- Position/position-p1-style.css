@@ -1,0 +1,89 @@
+/* top y left van a ser prioritarias, deberia usar solamente esas. Si top y left ya estan definidas, bottom y right no funcionan por la jerarquia. Puedo poner numeros negativos */
+/* position: relative = va a dejar espacio en blanco en el lugar que estaba aunque luego le cambie la position. ese va a ser su punto de referencia. */
+/* position: absolute = el espacio reservado que queda en el relative, en este no existe. Por lo que si hay una caja debajo, va a subir a ocupar el lugar que deja esta */
+/* position: absolute si queremos darle una position, va a tener de referencia la posicion de la caja contenedora y no del lugar en el que estaba originalmente como en relative */
+/* position: absolute va a tomar de referencia el viewport siempre y cuando el contenedor no este posicionado, sino tomará de referencia este. */
+/* position: absolute la caja se va a comportar ajustandose al contenido y no en bloque.
+/* el z-index va a funcionar solamente cuando la caja está posicionada */
+/* al darle una position: relative, eso va a adquirir z-index y las propiedades para moverlo, por lo que va a estar naturalmente por encima de las que no las tenga */
+/*para que el contenedor padre este por arriba del hijo, al hijo hay que darle un z-index: 1 y al padre no definirlo */
+
+
+* {
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium';
+}
+
+.caja1, .caja2, .caja3 {
+    width: 120px;
+    height: 120px;
+    display: block;
+    background: yellow
+}
+
+.caja1 {
+    background: orange;
+}
+
+.caja2 {
+    background: green;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 10 ;
+}
+
+.caja3 {
+    background: lightblue;
+    position: relative;
+}
+
+
+/* aca veo el position absolute */
+
+.contenedor{
+    width: 450px;
+    height: 450px;
+    margin: 0px auto; 
+    margin-top: -358px; /* le pongo este valor para que me lo suba hasta arriba y no quede debajo */ 
+    outline: 4px solid red;
+    position: relative; /*si no posiciono el contenedor, las cajas al ser absolute, van a tomar de referencia el viewport */
+
+}
+
+.caja4, .caja5, .caja6, .caja7, .caja8 { /* tambien puedo poner: div div (serian los div que estan adentro de otros div) */
+    width: 150px;
+    height: 150px;
+    position: absolute;
+}
+
+.caja4 {
+    background: orange;
+}
+
+.caja5 {
+    background: green;
+    right: 0px;
+}
+
+.caja6 {
+    background: lightblue;
+    right: 0px;
+    bottom: 0px;
+
+}
+
+.caja7 {
+    background: yellow;
+    bottom: 0px;
+
+}
+
+.caja8 { /*le pongo todos estos valores para que se centre si o si */
+    background: red;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}

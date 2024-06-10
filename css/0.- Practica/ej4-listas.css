@@ -1,0 +1,21 @@
+ul {
+    list-style-type: none; /* le saco los puntitos a la lista */
+    width: 150px; /* le doy un ancho a la caja */
+    text-align: center; /* pongo el texto en el centro, tambien lo puedo poner en li*/
+}
+
+li {
+    background: #00f;
+    color: white;
+    border: 2px solid white;
+}
+
+li a {
+    color: #fff;
+    text-decoration: none; /*se usa para sacarle el subrayado que trae por defecto */
+    display: block; /* para que si tocas en cualquier parte del rectangulo, tenga el hipervinculo */
+}
+
+li a:hover, li a:focus {   /*hover para que se ponga cuando pasas el mouse por encima y focus cuando pasas con el tab */ 
+    outline: 2px solid #f00;
+}

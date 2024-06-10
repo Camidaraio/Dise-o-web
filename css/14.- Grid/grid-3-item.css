@@ -1,0 +1,38 @@
+/*  min-content: generalmente se pone en el grid-template-columns y con el repeat. significa que van a valer el minimo del contenido cuando lo estrechamos.
+    max-content: lo mismo pero las columnas valdrian el maximo del contenido que tengan cada una en particular.
+    minmax: se utiliza para especificar cuanto es el minimo que queremos que mida y el maximo ej: grid-template-columns: repeat(3, minmax(100px, 300px) . coma entre medio.
+
+    Además, puedo poner el min-content y el max-content dentro del minmax. ej: repeat(3, minmax(min-content, 200px))
+
+    auto-fill: se usa por el primer valor del repeat (cuantas veces queremos que se repita), hace que se autocomplete la primera fila cuando tiene un lugar al agrandarlo.
+    por ej: repeat(auto-fill, minmax(120px, 1fr) va a subir una caja de 120px cuando la ultima se haya estrechado tanto para que haya lugar para que esta suba.
+    auto-complete: escala las celdas para que cuando estiramos el container, no quede el espacio en blanco.
+
+
+*/
+
+
+* {
+    font-family: "Sen", sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background: radial-gradient(circle, #fff, #bbb);
+    padding: 20px;
+
+}
+
+.grid-container {
+    display: grid;
+    border: 3px solid #000;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
+    grid-template-rows: repeat(3, 180px); 
+    grid-auto-flow: row;
+    background: #333;
+}
+
+.grid-item {
+    border: 1px solid #000;
+    background: #aaa;
+}

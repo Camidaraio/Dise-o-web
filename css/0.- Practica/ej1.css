@@ -1,0 +1,30 @@
+body{
+    background: #cfc;
+}
+
+h1 {
+    color: #f00;
+    font-family: 'Verdana', 'Calibri', 'sans-serif';
+    font-size: 32px;
+}
+
+h2 {
+    color: #a00;
+    font-family: 'Verdana', 'Calibri', 'sans-serif';
+    font-size: 24px;
+}
+
+.titulo1 {
+    display: inline-block;
+    color:#060;
+}
+
+li, p {
+    color: #00f;
+}
+
+.texto-resaltado {
+    background: #000;
+    color: #fff;
+}
+
